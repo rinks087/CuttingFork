@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ITGBrands.CSPF.ReadContainerPage"
+             Title="ReadContainerPage">
+
+    <ContentPage.Content>
+        <!-- ScrollView to make sure it works on various screen sizes -->
+        <ScrollView>
+            <VerticalStackLayout Padding="20" Spacing="20" HorizontalOptions="Center" VerticalOptions="StartAndExpand">
+
+                <!-- Title Section -->
+                <Label Text="Scan Container Tags"
+                       FontSize="20"
+                       HorizontalOptions="Center"/>
+
+                <!-- Feeder Selection -->
+                <Label Text="Feeder Name:"
+                       FontSize="14"
+                       HorizontalOptions="Start"/>
+
+                <Entry x:Name="FeederNameEntry"
+                       Text="{Binding FeederName}"
+                       BackgroundColor="LightGray"
+                       TextColor="Black"
+                       Margin="0,0,0,10"
+                       HeightRequest="40"
+                       FontSize="14"
+                       IsReadOnly="True"/>
+
+                <!-- Blend Code -->
+                <Label Text="Blend Code:"
+                       FontSize="14"
+                       HorizontalOptions="Start"/>
+
+                <Entry x:Name="BlendDescriptionEntry"
+                      
+                       BackgroundColor="LightGray"
+                       TextColor="Black"
+                       Margin="0,0,0,10"
+                       HeightRequest="40"
+                       FontSize="14"
+                       IsReadOnly="True"/>
+
+                <!-- Container ID -->
+                <Label Text="Container ID:"
+                       FontSize="14"
+                       HorizontalOptions="Start"/>
+
+                <Entry x:Name="ContainerIdEntry"
+                       Text="{Binding ContainerId}"
+                       BackgroundColor="LightGray"
+                       TextColor="Black"
+                       Margin="0,0,0,10"
+                       HeightRequest="40"
+                       FontSize="14"
+                       IsReadOnly="True"/>
+
+                <!-- Conformance -->
+                <Label Text="Conformance:"
+                       FontSize="14"
+                       HorizontalOptions="Start"/>
+
+                <Entry x:Name="ConformanceEntry"
+                       Text="{Binding Conformance}"
+                       BackgroundColor="LightGray"
+                       TextColor="Black"
+                       Margin="0,0,0,10"
+                       HeightRequest="40"
+                       FontSize="14"
+                       IsReadOnly="True"/>
+
+                <!-- Button Section in a Grid -->
+                <Grid ColumnSpacing="20" HorizontalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Back Button -->
+                    <Button Text="Back"
+                            BackgroundColor="#D9C4C3"
+                            TextColor="White"
+                            FontSize="16"
+                            WidthRequest="120"
+                            HeightRequest="60"
+                            Grid.Column="0"
+                            CornerRadius="10"
+                            HorizontalOptions="End"
+                            Clicked="OnBackClicked" />
+
+                    <!-- Write Button -->
+                    <Button Text="Write"
+                            BackgroundColor="Red"
+                            TextColor="White"
+                            FontSize="16"
+                            WidthRequest="120"
+                            HeightRequest="60"
+                            Grid.Column="1"
+                            CornerRadius="10"
+                            HorizontalOptions="Start"
+                            Clicked="OnWriteClicked" />
+                </Grid>
+
+            </VerticalStackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

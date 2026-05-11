@@ -1,0 +1,59 @@
+[
+  {
+    "ContainingType": "CSFTWebAPI.Controllers.CSFTAppSvcController",
+    "Method": "GetRecordCount",
+    "RelativePath": "api/DumpCount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "recordDate",
+        "Type": "System.DateTime",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CSFTWebAPI.Controllers.CSFTAppSvcController",
+    "Method": "GetSaratogaInfo",
+    "RelativePath": "api/get-SaratogaInfo",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CSFTWebAPI.Controllers.CSFTAppSvcController",
+    "Method": "SendDumpMessage",
+    "RelativePath": "api/SendDumpMessage",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "msg",
+        "Type": "CSFTWebAPI.Models.Msg",
+        "IsRequired": true
+      },
+      {
+        "Name": "endpoint",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "returnCode",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "returnDescription",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

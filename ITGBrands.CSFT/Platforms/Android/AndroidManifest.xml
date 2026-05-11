@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"  xmlns:tools="http://schemas.android.com/tools">
+	<uses-sdk
+        android:minSdkVersion="21"
+        tools:overrideLibrary="com.zebra.scannercontrol,com.zebra.rfid.api3" />
+
+
+	<application android:allowBackup="true" android:icon="@mipmap/appicon" android:supportsRtl="true"   android:label="@string/app_name"
+        tools:replace="android:label"></application>
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.BLUETOOTH" />
+	<uses-permission android:name="android.permission.USB_PERMISSION" />
+
+
+
+
+</manifest>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ITGBrands.CSPF.MainPage">
+
+        <ContentPage.Content>
+            <Grid>
+                <!-- Make sure the grid occupies the entire screen -->
+                <VerticalStackLayout Padding="20" Spacing="20" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+
+                    <!-- Title -->
+                    <Label Text="Purge Feeder Operator Menu"
+                       FontSize="20"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       Margin="0,0,0,20"/>
+
+                    <!-- Menthol Feeder Button -->
+                    <Button Text="Menthol Feeder"
+                        BackgroundColor="#D4C097"
+                        TextColor="White"
+                        WidthRequest="200"
+                        HeightRequest="60"
+                        FontSize="16"
+                        CornerRadius="10"
+                        HorizontalOptions="Center" Clicked="MentholFeederButton_Clicked"/>
+
+                    <!-- Non-Menthol Feeder Button -->
+                    <Button Text="Non-Menthol Feeder" 
+                        BackgroundColor="#C7B280"
+                        Command="{Binding NonMentholFeeder}"
+                        TextColor="White"
+                        WidthRequest="200"
+                        HeightRequest="60"
+                        FontSize="16"
+                        CornerRadius="10"
+                        HorizontalOptions="Center" Clicked="NonMentholFeederButton_Clicked"/>
+
+                    <!-- Exit Button -->
+                    <Button Text="Exit"
+                        BackgroundColor="#D9C4C3"
+                        TextColor="White"
+                        WidthRequest="200"
+                        HeightRequest="60"
+                        FontSize="16"
+                        CornerRadius="10"
+                        HorizontalOptions="Center"/>
+                </VerticalStackLayout>
+            </Grid>
+        </ContentPage.Content>
+
+
+
+
+</ContentPage>

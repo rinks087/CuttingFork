@@ -1,0 +1,86 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:vm="clr-namespace:ITGBrands.CSPF.ViewModels"
+             x:Class="ITGBrands.CSPF.MentholFeeder">
+
+    <ContentPage.BindingContext>
+        <vm:CSPFViewModel></vm:CSPFViewModel>
+    </ContentPage.BindingContext>
+
+   
+
+    <ContentPage.Content>
+        <VerticalStackLayout Padding="20" Spacing="20" HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+
+            <!-- Title Section -->
+            <Label Text="Purge Feeder Operator Menu"
+                   FontSize="20"
+                   HorizontalOptions="Center"/>
+
+            <Label x:Name="function" Text="Menthol Feeder"
+                   FontSize="16"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"/>
+            <Label x:Name="FeederType" Text="fr" IsVisible="False"
+                FontSize="16"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"/>
+
+
+
+            <!-- Feeder Selection -->
+            <Label Text="Select a Feeder:"
+                   FontSize="14"
+                   HorizontalOptions="Start"/>
+
+            <Picker x:Name="cmbfeeder"   Title="Select Feeder" WidthRequest="250"
+                ItemsSource="{Binding Feederdata}" ItemDisplayBinding="{Binding Text}"  SelectedItem="{Binding SelectedNonConformanceItem}"
+                HorizontalOptions="Center"
+                VerticalOptions="Center" />
+
+            <!-- Conformance Selection -->
+            <Label Text="Conformance:"
+                   FontSize="14"
+                   HorizontalOptions="Start"/>
+
+            <Picker x:Name="cmbconformance"
+                    WidthRequest="250"
+                    FontSize="16"
+                    HorizontalOptions="Center"
+                ItemsSource="{Binding NonConformancedata}" ItemDisplayBinding="{Binding Text}"  SelectedItem="{Binding SelectedNonConformanceItem}" >
+
+
+            </Picker>
+
+            <!-- Button Section -->
+            <Grid ColumnSpacing="20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Back Button -->
+                <Button Text="Back"
+                        BackgroundColor="#D9C4C3"
+                        TextColor="White"
+                        FontSize="16"
+                        WidthRequest="120"
+                        HeightRequest="60"
+                        Grid.Column="0"
+                        CornerRadius="10"
+                        HorizontalOptions="End" Clicked="BackButton_Clicked"/>
+
+                <!-- Scan Button -->
+                <Button Text="Scan"
+                        BackgroundColor="#D4C097"
+                        TextColor="White"
+                        FontSize="16"
+                        WidthRequest="120"
+                        HeightRequest="60"
+                        Grid.Column="1"
+                        CornerRadius="10"
+                        HorizontalOptions="Start" Clicked="ScanTag_Clicked"/>
+            </Grid>
+        </VerticalStackLayout>
+    </ContentPage.Content>
+</ContentPage>
